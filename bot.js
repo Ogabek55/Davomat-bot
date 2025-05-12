@@ -30,7 +30,7 @@ bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     const hour = new Date().getHours();
 
-    if (hour < 20 && hour >= 5) {
+    if (hour < 20 && hour >= 19) {
         return bot.sendMessage(chatId, '⛔ Davomat faqat kechki 23:00 dan tonggi 5:00 gacha ochiq bo‘ladi.');
     }
 
@@ -46,7 +46,7 @@ bot.on('message', (msg) => {
     if (!state) return;
 
     const hour = new Date().getHours();
-    if (hour < 20 && hour >= 5) {
+    if (hour < 20 && hour >= 19) {
         return bot.sendMessage(chatId, '⛔ Davomat faqat kechki 23:00 dan tonggi 5:00 gacha ochiq bo‘ladi.');
     }
 
